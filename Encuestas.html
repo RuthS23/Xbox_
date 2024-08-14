@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta - Xbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #107C10;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0E640E;
+        } 
+        
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+        }
+        
+        nav a:hover {
+            background-color: #075207;
+        }
+        
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        
+        .carousel img {
+            width: 80%;
+            height: auto;
+        }
+        
+        .carousel img:not(:first-child) {
+            display: none;
+        }
+        
+        .section {
+            padding: 2rem;
+        }
+        
+        .image {
+            text-align: center;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+       <h1>Encuesta de Xbox</h1>
+       <nav>
+         <a href="inicio.html">Inicio</a>
+          <a href="encuestas">Encuestas</a>
+          <a href="valores.html">Valores</a><br>
+    <form action="submit_form.php" method="post">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+                
+    <label for="edad">Edad:</label><br>
+    <input type="number" id="edad" name="edad" required><br><br>
+                
+        <label for="genero">Género:</label><br>
+        <select id="genero" name="genero">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+            <option value="prefiero_no_decirlo">Prefiero no decirlo</option>
+        </select><br><br>
+                
+                <label>¿Cuál es tu consola Xbox favorita?</label><br>
+                <input type="radio" id="xbox_original" name="consola_favorita" value="xbox_original" required>
+                <label for="xbox_original">Xbox Original</label><br>
+                <input type="radio" id="xbox_360" name="consola_favorita" value="xbox_360">
+                <label for="xbox_360">Xbox 360</label><br>
+                <input type="radio" id="xbox_one" name="consola_favorita" value="xbox_one">
+                <label for="xbox_one">Xbox One</label><br>
+                <input type="radio" id="xbox_series_x" name="consola_favorita" value="xbox_series_x">
+                <label for="xbox_series_x">Xbox Series X</label><br><br>
+                
+                <label for="comentarios">Comentarios adicionales:</label><br>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br><br>
+                
+                <input type="submit" value="Enviar">
+            </form>
+        </body>
+        </html>
+        

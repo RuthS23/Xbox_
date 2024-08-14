@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal de Xbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #107C10;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0E640E;
+        } 
+        
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+        }
+        
+        nav a:hover {
+            background-color: #075207;
+        }
+        
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        
+        .carousel img {
+            width: 80%;
+            height: auto;
+        }
+        
+        .carousel img:not(:first-child) {
+            display: none;
+        }
+        
+        .section {
+            padding: 2rem;
+        }
+        
+        .image {
+            text-align: center;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Bienvenido a Xbox</h1>
+    </header>
+
+    <nav>
+
+        <a href="inicio.html">Inicio</a><p>
+
+        </p>
+        <a href="encuestas">Encuestas</a>
+        <a href="valores.html">Valores</a>
+    </nav>
+    
+    </section>
+     <div class="">
+      <p><a href="https://www.xbox.com/es-MX">Pagina oficial</a></p>
+      <section id="contact">
+      </section>
+    <section id="inicio" class="section">
+        <div class="carousel">
+            <img src="11.jpg" alt="Imagen 1">
+            <img src="10.jpg" alt="Imagen 2">
+            <img src="12.jpg" alt="Imagen 3">
+         
+        </div>
+    </div>
+    <div class="item">
+        <img src="9.jpg" alt="">
+        <p></p>
+    </div>
+        <script>
+            let index = 0;
+            const images = document.querySelectorAll('.carousel img');
+            setInterval(() => {
+                images[index].style.display = 'none';
+                index = (index + 1) % images.length;
+                images[index].style.display = 'block';
+            }, 3000); // Cambia de imagen cada 2 segundos
+        </script>
+    
+        <footer>
+            <p>&copy; 2024 © Microsoft 2024. Todos los derechos reservados.</p>
+        </footer>
+
+</body>
+
+</html>
